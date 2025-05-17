@@ -9,8 +9,7 @@ export default function Home() {
     market: '',
     traction: '',
     team: '',
-    round: '',
-    excitement: ''
+    round: ''
   });
 
   const [loading, setLoading] = useState(false);
