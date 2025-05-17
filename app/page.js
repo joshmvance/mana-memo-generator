@@ -20,24 +20,10 @@ export default function Home() {
   };
 
   const generatePrompt = () => {
-    return `You're an expert venture analyst. Write an investment memo in the following format:
-
-1. **Company Overview**
-2. **Product**
-3. **Market**
-4. **Traction**
-5. **Team**
-6. **Round Details**
-7. **Why We’re Excited**
+    return `You're an expert venture analyst. write one short paragraph describing the company
 
 Use the inputs below:
-- Company: ${form.company}
-- Product: ${form.product}
-- Market: ${form.market}
-- Traction: ${form.traction}
-- Team: ${form.team}
-- Round: ${form.round}
-- Excitement: ${form.excitement}`;
+- Company: ${form.company}`;
   };
 
   const handleSubmit = async (e) => {
