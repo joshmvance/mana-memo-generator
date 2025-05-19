@@ -1,7 +1,6 @@
 export async function POST(req) {
   const body = await req.json();
 
-  console.log("API KEY:", process.env.OPENAI_API_KEY);
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -16,8 +15,11 @@ export async function POST(req) {
   });
 
   const data = await response.json();
+
   return new Response(JSON.stringify(data), {
     status: 200,
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
 }
